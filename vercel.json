@@ -1,17 +1,13 @@
 {
-              "version": 2,
-              "builds": [
-                {
-                  "src": "index.js",
-                  "use": "@now/node"
-                }
-              ],
-              "routes": [
-                {
-                 
-                  "src": "/(.*)",
-                  
-                  "dest": "index.js"
-                }
-              ]
-            }
+  "version": 2,
+  "builds": [{ "src": "app.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/api/anime/(.*)", "dest": "/app.js" },
+    { "src": "/api/episode/(.*)", "dest": "/app.js" },
+    { "src": "/api/adfreedownload", "dest": "/app.js" },
+    { "src": "/api/search", "dest": "/app.js" },
+    { "src": "/api/popular/(.*)", "dest": "/app.js" },
+    { "src": "/api/recent/(.*)", "dest": "/app.js" },
+    { "src": "/api/upcoming/(.*)", "dest": "/app.js" }
+  ]
+}
