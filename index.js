@@ -74,17 +74,17 @@ app.get('/api/anime/:animeName', async (req, res) => {
     }
 });
 
-app.get('/api/episode/:animeName/:episodeNumber', async (req, res) => {
-    const animeName = req.params.animeName;
-    const episodeNumber = req.params.episodeNumber;
+app.get('/api/episode/:episodeTitle', async (req, res) => {
+    const episodeTitle = req.params.episodeTitle;
     try {
-        const episodeData = await getJson(episodeapi + animeName + "-episode-" + episodeNumber);
+        const episodeData = await getJson(episodeapi + episodeTitle);
         res.json(episodeData);
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
 
 app.get('/api/adfreedownload', async (req, res) => {
     const anime = req.query.anime;
