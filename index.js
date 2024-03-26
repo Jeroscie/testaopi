@@ -10,13 +10,13 @@ const animeapi = "/anime/";
 const episodeapi = "/episode/";
 const dlapi = "/download/";
 const searchapi = "/search/";
-const popularapi = "https://api.anime-dex.workers.dev/gogoPopular/";
+const popularapi = "https://api13.anime-dex.workers.dev/gogoPopular/";
 
 // Api Server Manager
 const AvailableServers = [
-    "https://api1.anime-dex.workers.dev",
-    "https://api2.anime-dex.workers.dev",
-    "https://api3.anime-dex.workers.dev",
+    "https://api13.anime-dex.workers.dev/",
+    "https://api13.anime-dex.workers.dev/",
+    "https://api13.anime-dex.workers.dev/",
 ];
 
 function getApiServer() {
@@ -141,7 +141,7 @@ app.get('/api/recent/:pageNumber', async (req, res) => {
     const pageNumber = req.params.pageNumber;
 
     try {
-        const recentData = await getJson(`https://api.anime-dex.workers.dev/recent/${pageNumber}`);
+        const recentData = await getJson(`https://api13.anime-dex.workers.dev/recent/${pageNumber}`);
         res.json(recentData);
     } catch (error) {
         console.error(error);
@@ -154,7 +154,7 @@ app.get('/api/upcoming/:pageNumber', async (req, res) => {
     const pageNumber = req.params.pageNumber;
 
     try {
-        const upcomingData = await getJson(`https://api.anime-dex.workers.dev/upcoming/${pageNumber}`);
+        const upcomingData = await getJson(`https://api13.anime-dex.workers.dev/upcoming/${pageNumber}`);
         res.json(upcomingData);
     } catch (error) {
         console.error(error);
