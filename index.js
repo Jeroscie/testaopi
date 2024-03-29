@@ -14,9 +14,9 @@ const popularapi = "https://api13.anime-dex.workers.dev/gogoPopular/";
 
 // Api Server Manager
 const AvailableServers = [
-    "https://api13.anime-dex.workers.dev/",
-    "https://api13.anime-dex.workers.dev/",
-    "https://api13.anime-dex.workers.dev/",
+    "https://api100.anime-dex.workers.dev/",
+    "https://api100.anime-dex.workers.dev/",
+    "https://api100.anime-dex.workers.dev/",
 ];
 
 function getApiServer() {
