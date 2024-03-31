@@ -17,6 +17,7 @@ const AvailableServers = [
     "https://api100.anime-dex.workers.dev/",
     "https://api100.anime-dex.workers.dev/",
     "https://api100.anime-dex.workers.dev/",
+    "https://api100.anime-dex.workers.dev/",
 ];
 
 function getApiServer() {
